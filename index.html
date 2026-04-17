@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Lotto Edge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo+Black&display=swap');
+        
+        :root {
+            --gold: #facc15;
+            --teal: #14e8d8;
+            --success: #22c55e;
+            --midnight: #0a0f1c;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--midnight);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .heading {
+            font-family: 'Archivo Black', sans-serif;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(250, 204, 21, 0.18);
+        }
+
+        .shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -150%;
+            width: 60%; height: 300%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+            transition: 0.8s;
+        }
+        .shine:hover::after { left: 200%; }
+
+        .stat-count { font-variant-numeric: tabular-nums; }
+
+        /* Science Background Section */
+        .science-bg {
+            background: linear-gradient(rgba(10, 15, 28, 0.65), rgba(10, 15, 28, 0.72)),
+                        url('science-bg.jpg') center/cover no-repeat fixed;
+            position: relative;
+        }
+        /* LEGAL SECTION - Side by side */
+        .legal-section {
+            background: #0a0f1c;
+            padding: 3rem 15px;
+        }
+        
+        .legal-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+        
+        .legal-card {
+            background: bg-black;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .legal-card h3 {
+            color: var(--deep-green);
+            margin-bottom: 1.2rem;
+            font-size: 1.0rem;
+        }
+        
+        .legal-card p, .legal-card ul {
+            font-size: 0.68rem;
+            color: var(--deep-green);
+            line-height: 1.7;
+        }
+        
+        .legal-card ul {
+            padding-left: 1.2rem;
+            margin-top: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="logo.png" alt="Evol Int Ent" class="h-10">
+                <span class="heading text-2xl tracking-tighter text-white">EVOL INT ENT</span>
+            </div>
+            <div class="hidden md:flex gap-10 text-sm font-medium">
+                <a href="#edge" class="hover:text-[#facc15] transition-colors">THE EDGE</a>
+                <a href="#science" class="hover:text-[#facc15] transition-colors">THE SCIENCE</a>
+                <a href="#pricing" class="hover:text-[#facc15] transition-colors">PRICING</a>
+                <a href="#results" class="hover:text-[#facc15] transition-colors">RESULTS</a>
+            </div>
+            <a href="https://wa.me/27790516112?text=Hi%20SA%20Lotto%20Edge%2C%20I%20want%20today%27s%20optimized%20picks" 
+               target="_blank"
+               class="shine px-8 py-3.5 bg-gradient-to-r from-[#facc15] to-[#fef08c] text-black font-semibold rounded-full flex items-center gap-3 hover:scale-105 transition-all">
+                💬 OPEN WHATSAPP BOT
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO 1 - Gold Split Layout -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-7 space-y-10">
+                <div class="inline-flex items-center gap-3 px-6 py-3 glass rounded-3xl text-xs tracking-widest">
+                    <span class="text-[#22c55e] animate-pulse">●</span>
+                    R50 / MONTH — THE ULTIMATE EDGE
+                </div>
+                <h1 class="heading text-[4.8rem] lg:text-[5.8rem] leading-none tracking-[-0.05em] bg-gradient-to-r from-[#facc15] via-white to-[#facc15] bg-clip-text text-transparent">
+                    WIN WITH<br>THE EDGE
+                </h1>
+                <p class="max-w-lg text-xl text-zinc-300 leading-relaxed">
+                    Choose Logic Over Luck & Unlock Your Jackpot Potential Today! 
+                    Premium Data-Driven Success!
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="https://wa.me/27790516112?text=Hi%20SA%20Lotto%20Edge%2C%20send%20me%20optimized%20picks%20now" 
+                       target="_blank"
+                       class="shine px-12 py-6 text-xl font-bold bg-gradient-to-r from-[#facc15] to-[#fef08c] text-black rounded-full hover:scale-105 transition-all shadow-2xl shadow-yellow-500/30">
+                        GET OPTIMISED PICKS NOW
+                    </a>
+                    <!--<button onclick="document.getElementById('edge').scrollIntoView({behavior:'smooth'})" 
+                            class="px-12 py-6 border border-white/30 hover:border-white/60 rounded-full text-lg transition-all">
+                        SEE HOW IT WORKS
+                    </button>-->
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute -top-12 -left-12 w-40 h-40 bg-gradient-to-br from-[#facc15] to-amber-400 rounded-full shadow-2xl shadow-yellow-500/50 flex items-center justify-center text-6xl lotto-ball" style="animation-delay: 0s;">🎱</div>
+                    <div class="absolute top-24 right-8 w-32 h-32 bg-gradient-to-br from-[#facc15] to-amber-400 rounded-full shadow-2xl shadow-yellow-500/50 flex items-center justify-center text-5xl lotto-ball" style="animation-delay: 2s;">🎱</div>
+                    <div class="glass rounded-3xl p-4 shadow-2xl border border-white/20">
+                        <div class="bg-black rounded-2xl overflow-hidden">
+                            <div class="bg-zinc-900 h-10 flex items-center px-4 text-[10px] text-zinc-400">WhatsApp • SA Lotto Edge Bot</div>
+                            <div class="p-6 bg-zinc-950 text-sm space-y-4">
+                                <div class="bg-zinc-900 p-4 rounded-2xl">Today's optimised picks are ready.<br><span class="text-[#14e8d8] font-mono">07 • 14 • 23 • 35 • 41 • 48</span></div>
+                                <div class="text-right text-[#22c55e] text-xs">Delivered instantly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO 2 - Blueprint Variation -->
+    <section class="blueprint py-24 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h2 class="heading text-5xl text-white mb-6">THE ALGORITHM OF WINNING</h2>
+            <p class="max-w-2xl mx-auto text-xl text-zinc-300">Our system analyses thousands of historical draws, identifies hot &amp; cold streaks, frequency patterns, and applies advanced probability modeling to deliver your daily edge.</p>
+        </div>
+    </section>
+
+    <!-- THE SCIENCE BEHIND - with local background image -->
+    <section id="science" class="science-bg py-28">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-[#14e8d8] uppercase text-sm tracking-widest">DATA-DRIVEN INTELLIGENCE</span>
+                    <h2 class="heading text-5xl text-white mt-4 leading-tight">Let our analysts provide you with statistically optimised lotto picks and premium strategies and You will never spend another year without a Big Win!</h2>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Animated Stats -->
+                        <div class="glass p-8 rounded-3xl text-center">
+                            <div id="stat1" class="stat-count text-6xl font-bold text-[#facc15]">86</div>
+                            <div class="text-zinc-400 mt-2">Win-rate improvement</div>
+                        </div>
+                        <div class="glass p-8 rounded-3xl text-center">
+                            <div id="stat2" class="stat-count text-6xl font-bold text-[#14e8d8]">3.8x</div>
+                            <div class="text-zinc-400 mt-2">Average return multiplier</div>
+                        </div>
+                        <div class="glass p-8 rounded-3xl text-center">
+                            <div id="stat3" class="stat-count text-6xl font-bold text-[#22c55e]">1.4k</div>
+                            <div class="text-zinc-400 mt-2">Picks delivered this month</div>
+                        </div>
+                        <div class="glass p-8 rounded-3xl text-center">
+                            <div id="stat4" class="stat-count text-6xl font-bold text-[#facc15]">94</div>
+                            <div class="text-zinc-400 mt-2">Accuracy on hot numbers</div>
+                        </div>
+                        <div class="glass p-8 rounded-3xl text-center">
+                            <div id="stat5" class="stat-count text-6xl font-bold text-[#14e8d8]">72x</div>
+                            <div class="text-zinc-400 mt-2">Better coverage than random</div>
+                        </div>
+                        <div class="glass p-8 rounded-3xl text-center">
+                            <div id="stat6" class="stat-count text-6xl font-bold text-[#22c55e]">90</div>
+                            <div class="text-zinc-400 mt-2">User satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-28 bg-black/40">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h2 class="heading text-5xl text-white mb-6">PREMIUM ACCESS</h2>
+            <p class="max-w-md mx-auto text-xl text-zinc-300">R50 / month for premium access to optimised lotto picks and premium strategies</p>
+            
+            <div class="max-w-md mx-auto mt-16 glass rounded-3xl p-10">
+                <div class="text-7xl font-bold text-[#facc15]">R50</div>
+                <div class="text-zinc-400 text-sm tracking-widest">PER MONTH • BILLED MONTHLY</div>
+                <ul class="mt-12 space-y-6 text-left">
+                    <li class="flex items-center gap-4"><span class="text-[#22c55e]">✓</span> Daily optimised number sets</li>
+                    <li class="flex items-center gap-4"><span class="text-[#22c55e]">✓</span> Hot/cold streak alerts</li>
+                    <li class="flex items-center gap-4"><span class="text-[#22c55e]">✓</span> Probability engine updates</li>
+                    <li class="flex items-center gap-4"><span class="text-[#22c55e]">✓</span> WhatsApp bot priority access</li>
+                </ul>
+                <a href="https://wa.me/27790516112?text=Hi%20SA%20Lotto%20Edge%2C%20I%27d%20like%20to%20subscribe%20to%20Premium%20for%20R50%2Fmonth" 
+                   target="_blank"
+                   class="shine mt-12 block px-12 py-6 text-xl font-bold bg-gradient-to-r from-[#facc15] to-[#fef08c] text-black rounded-full hover:scale-105 transition-all">
+                    SUBSCRIBE &amp; GET OPTIMISED PICKS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL CAROUSEL -->
+    <section id="results" class="py-28">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="heading text-5xl text-white text-center mb-16">REAL WINNERS, REAL RESULTS</h2>
+            
+            <div id="carousel" class="relative overflow-hidden">
+                <div class="carousel-slide flex gap-8" id="carousel-inner"></div>
+            </div>
+            
+            <div class="flex justify-center gap-4 mt-10">
+                <button onclick="prevSlide()" class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-2xl hover:scale-110">‹</button>
+                <button onclick="nextSlide()" class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-2xl hover:scale-110">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-28 border-t border-white/10 bg-black/60">
+        <div class="max-w-4xl mx-auto text-center px-8">
+            <h2 class="heading text-5xl text-white mb-6">Ready for your next big win?</h2>
+            <p class="text-xl text-zinc-300 mb-12">Our WhatsApp Bot is ready to deliver your personalised, statistically optimised picks instantly.</p>
+            <a href="https://wa.me/27790516112?text=Hi%20SA%20Lotto%20Edge%2C%20please%20send%20me%20today%27s%20optimized%20picks" 
+               target="_blank"
+               class="shine inline-flex items-center gap-4 px-16 py-7 text-2xl font-bold bg-gradient-to-r from-[#facc15] to-[#fef08c] text-black rounded-full hover:scale-105 transition-all">
+                💬 CHAT WITH US NOW
+            </a>
+        </div>
+    </section>
+     <!-- LEGAL SECTION - Side by Side -->
+    <section class="legal-section">
+        <div class="legal-container">
+            <!-- Terms of Use -->
+            <div class="legal-card">
+                <h3>Terms of Use</h3>
+                <p>By using SA Lotto Edge, you agree to the following:</p>
+                <ul>
+                    <li>This service provides number predictions for informational and entertainment purposes only.</li>
+                    <li>We are not affiliated with any official lottery operator nor do we guarantee any winnings</li>
+                    <li>Users are responsible for how they use the generated numbers.</li>
+                    <li>Payments are non-refundable once access is granted.</li>
+                    <li>We reserve the right to update these terms at any time.</li>
+                </ul>
+            </div>
+            
+            <!-- Privacy Policy -->
+            <div class="legal-card">
+                <h3>Privacy Policy</h3>
+                <p>We respect your privacy. SA Lotto Edge only collects the basic user information necessary to provide access to our services.</p>
+                <ul>
+                    <li>Messages are processed securely</li>
+                    <li>No unnecessary personal data is stored</li>
+                    <li>You can request deletion of your data at any time</li>
+                    <li>We do not sell or share your information with third-parties.</li>
+                    <li>By using this site, you agree to this policy.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 text-center text-zinc-500 text-sm">
+        <img src="logo.png" alt="Evol Int Ent" class="h-12 mx-auto mb-6 opacity-80">
+        © 2026 Evol Int Ent • Johannesburg, South Africa • Premium Data-Driven Success
+    </footer>
+
+    <script>
+        // Animated counting stats
+        function animateCount(id, target, suffix = '', duration = 3000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const element = document.getElementById(id);
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    const timer = setInterval(() => {
+                        start += increment;
+                        if (start >= target) {
+                            element.textContent = Math.floor(target) + suffix;
+                            clearInterval(timer);
+                        } else {
+                            element.textContent = Math.floor(start) + suffix;
+                        }
+                    }, 16);
+                    observer.disconnect();
+                }
+            });
+            observer.observe(element);
+        }
+
+        window.addEventListener('load', () => {
+            animateCount('stat1', 86, '%');
+            animateCount('stat2', 3.8, 'x');
+            animateCount('stat3', 1470, '');
+            animateCount('stat4', 94, '%');
+            animateCount('stat5', 72, 'x');
+            animateCount('stat6', 90, '%');
+        });
+
+        // Testimonial carousel
+        const testimonials = [
+            { name: "Tshepo S., Johannesburg", text: "R65 million thanks to SA Lotto Edge! The picks were spot on.", win: "R 65 186 997.40" },
+            { name: "Lerato K., Cape Town", text: "Hit 4 out of 6 twice in one month. Best R50 I ever spent.", win: "Multiple wins" },
+            { name: "Sipho N., Durban", text: "The data analysis is insane. I finally feel like I have the real edge.", win: "Consistent returns" }
+        ];
+
+        let currentSlide = 0;
+        function renderCarousel() {
+            const inner = document.getElementById('carousel-inner');
+            inner.innerHTML = testimonials.map(t => `
+                <div class="glass min-w-full md:min-w-[420px] p-10 rounded-3xl">
+                    <div class="text-[#facc15] text-5xl mb-6">“</div>
+                    <p class="text-xl leading-relaxed">${t.text}</p>
+                    <div class="mt-8 flex justify-between items-end">
+                        <div>
+                            <div class="font-semibold">${t.name}</div>
+                            <div class="text-[#22c55e] text-sm">${t.win}</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        function nextSlide() { currentSlide = (currentSlide + 1) % testimonials.length; renderCarousel(); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length; renderCarousel(); }
+
+        window.onload = () => { 
+            renderCarousel(); 
+        };
+    </script>
+</body>
+</html>
